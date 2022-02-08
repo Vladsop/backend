@@ -13,7 +13,7 @@ export class Child {
     @Column()
     parentId: number;
 
-    @ManyToOne(() => Parent, parent => parent.children)
+    @ManyToOne(() => Parent, parent => parent.children, { onDelete: 'CASCADE'})
     @JoinColumn({name: "parentId"})
     parent: Parent;
    

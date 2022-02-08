@@ -10,7 +10,7 @@ export class Parent {
     @Column()
     name: string;
 
-    @OneToMany(() => Child, child => child.parent)
+    @OneToMany(() => Child, child => child.parent,{ cascade: true })
     children: Child[];
 
 }
